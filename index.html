@@ -26,7 +26,6 @@
       place-items: center;
       background: radial-gradient(circle at top, var(--bg2), var(--bg1));
       font-family: system-ui, sans-serif;
-      overflow: hidden;
       padding: 16px;
     }
 
@@ -118,8 +117,12 @@
 
     .fireworks {
       width: min(380px, 90vw);
-      margin: 0 auto;
+      height: auto;
+      max-height: 45vh;
+      object-fit: contain;
+      border-radius: 14px;
       display: block;
+      margin: 12px auto 0;
     }
 
     @keyframes pop {
@@ -171,7 +174,7 @@
             fill="#ff7aa2"/>
     </svg>
 
-    <h1>Sascha, since we’re both single this Valentine’s, can I take you out for dinner?</h1
+    <h1>Sascha, since we’re both single this Valentine’s, can I take you out for dinner?</h1>
   
 
 
@@ -186,10 +189,15 @@
     <section class="result" id="result">
       <h2>YAY! 🎉</h2>
       <img
-        class="fireworks"
-        src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif"
-        alt="Fireworks"
-      />
+  class="fireworks"
+  src="sweating.jpeg"
+  alt="Me stressing until you said yes"
+/>
+<p style="margin-top: 10px; font-size: 16px; opacity: 0.85;">
+  Me stressing until you said yes
+</p>
+
+    
     </section>
   </main>
 
@@ -291,18 +299,6 @@
 
     noBtn.addEventListener("click", e => e.preventDefault());
 
-    noBtn.addEventListener("mouseenter", () => {
-  const x = Math.random() * 250 - 125; // left/right
-  const y = Math.random() * 150 - 75;  // up/down
-
-  noBtn.style.transform = `translate(${x}px, ${y}px)`;
-});
-
-  const x = Math.random() * 250;
-  const y = Math.random() * 150;
-
-  
-});
 
 
     /* ---------- YES CLICK ---------- */
